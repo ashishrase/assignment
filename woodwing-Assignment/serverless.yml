@@ -1,0 +1,17 @@
+service: servrless-distance-calculator
+provider:
+    name: aws
+    runtime : python3.8
+    region: us-east-1
+    lambdaHashingVersion: 20201221
+functions:
+    distanceAddition:
+      handler: functions/calculate-distance.distanceAddition
+      events:
+        - http:
+           path: /result
+           method: get
+           cors: true
+
+
+
