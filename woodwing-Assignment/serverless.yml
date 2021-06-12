@@ -12,6 +12,9 @@ functions:
            path: /result
            method: get
            cors: true
-
-
+      events:
+        - http:
+           path: /result
+           method: post
+           cors: true
 
